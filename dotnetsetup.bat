@@ -1,10 +1,4 @@
-@REM cd D:\ICS4U\TypingGame
-@REM SET DOTNET_ROOT=D:\ICS4U\dotnetSDK\dotnet.exe
-@REM SET DOTNET_MULTILEVEL_LOOKUP=0
-@REM SET PATH=D:\ICS4U\dotnetSDK\dotnet.exe;%PATH%
-@REM code .
-@REM WORK IN PROGRESS TO GET THIS WORKING ON SCHOOL COMPUTERS
-cd D:\ICS4U\TypingGame
+D:
 
 SET DOTNET_ROOT=D:\ICS4U\dotnetSDK
 
@@ -12,4 +6,9 @@ SET DOTNET_MULTILEVEL_LOOKUP=0
 
 SET PATH=D:\ICS4U\dotnetSDK;%PATH%
 
-code .
+@REM Temporary Solution--- Use CMD for the integrated terminal and run the above commands on it first, and it should work
+@REM find a way to automatically do this each new terminal instance for ease of access
+@REM set default profile in settings.json to ... "terminal.integrated.defaultProfile.windows": "Command Prompt",
+dotnet run
+
+@REM Just type in the terminal -- dotnetsetup.bat -- and it should run this fine
