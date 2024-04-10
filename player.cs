@@ -1,5 +1,11 @@
 // Player Class
-class Player{
+using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+namespace TypingGame{
+public class Player{
 // Contains Resources variable(lives)
 int Resources;
 // Contains empty string "name"
@@ -35,4 +41,5 @@ public void selectName(List<char> listName)
         }
     }
 // Contains method to check if player's inputs match with repair keywords
+}
 }
