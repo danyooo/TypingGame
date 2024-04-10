@@ -7,8 +7,9 @@ namespace TypingGame;
 
 public class Game1 : Game
 {
-object Player;
-List<char> PlayerName;
+ Player player = new Player();
+List<char> PlayerName = new List<char>();
+
 
 
     private GraphicsDeviceManager _graphics;
@@ -24,11 +25,6 @@ List<char> PlayerName;
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-//create player
-Player = new Player();
-PlayerName = new List<char>();
-
-Console.WriteLine("Please enter your name");
         base.Initialize();
     }
 
@@ -45,14 +41,15 @@ Console.WriteLine("Please enter your name");
             Exit();
 
         // TODO: Add your update logic here
+        // do this later
 // detect player name state
-while(Player.name == ""){
-Player.readInput();
-Player.selectName(PlayerName);
-if(Player.name !=""){
-    break;
-}
-}
+// while(player.name == ""){
+// player.readInput();
+// player.selectName(PlayerName);
+// if(player.name !=""){
+//     break;
+// }
+// }
         base.Update(gameTime);
     }
 

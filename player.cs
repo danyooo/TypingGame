@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 namespace TypingGame{
-class Player{
+public class Player{
 // Contains Resources variable(lives)
 int Resources;
 // Contains empty string "name"
