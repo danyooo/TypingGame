@@ -7,8 +7,12 @@ namespace TypingGame;
 
 public class Game1 : Game
 {
+    // create a Player object
  Player player = new Player();
+ // Create a list that would contain the letters the player types (to set into a name)
 List<char> PlayerName = new List<char>();
+// Create a SpriteFont Object ( To load up the font to use for text)
+ SpriteFont font;
 
 
 
@@ -33,6 +37,8 @@ List<char> PlayerName = new List<char>();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+            //Load the text font
+    font = Content.Load<SpriteFont>("gameFont");
     }
 
     protected override void Update(GameTime gameTime)
@@ -58,6 +64,10 @@ List<char> PlayerName = new List<char>();
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
+            //draw text
+        _spriteBatch.Begin();
+_spriteBatch.DrawString(font,"testing",new Vector2(0,0),Color.Black);
+        _spriteBatch.End();
         base.Draw(gameTime);
     }
 }
