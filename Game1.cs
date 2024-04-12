@@ -9,6 +9,7 @@ public class Game1 : Game
 {
     // create a Player object
  Player player = new Player();
+ wordBank testBank = new wordBank();
  // Create a list that would contain the letters the player types (to set into a name)
 List<char> PlayerName = new List<char>();
 // Create a SpriteFont Object ( To load up the font to use for text)
@@ -18,17 +19,18 @@ List<char> PlayerName = new List<char>();
 
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+    
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        // wordBank.chooseWord();
         base.Initialize();
     }
 
@@ -67,6 +69,7 @@ List<char> PlayerName = new List<char>();
             //draw text
         _spriteBatch.Begin();
 _spriteBatch.DrawString(font,"testing",new Vector2(0,0),Color.Black);
+// testBank.displayText(_spriteBatch,font,chosenWord, 36,30);
         _spriteBatch.End();
         base.Draw(gameTime);
     }
