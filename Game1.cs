@@ -7,24 +7,31 @@ namespace TypingGame;
 
 public class Game1 : Game
 {
+    // create a Player object
  Player player = new Player();
+ wordBank testBank = new wordBank();
+ // Create a list that would contain the letters the player types (to set into a name)
 List<char> PlayerName = new List<char>();
+// Create a SpriteFont Object ( To load up the font to use for text)
+ SpriteFont font;
 
 
 
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+    
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        testBank.chooseWord();
+        Console.WriteLine("Help Me!");
         base.Initialize();
     }
 
@@ -33,6 +40,8 @@ List<char> PlayerName = new List<char>();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+            //Load the text font
+    font = Content.Load<SpriteFont>("gameFont");
     }
 
     protected override void Update(GameTime gameTime)
@@ -58,6 +67,11 @@ List<char> PlayerName = new List<char>();
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
+            //draw text
+        _spriteBatch.Begin();
+_spriteBatch.DrawString(font,"testing",new Vector2(0,0),Color.Black);
+testBank.displayText(_spriteBatch,font,testBank.chosenWord, 36,30);
+        _spriteBatch.End();
         base.Draw(gameTime);
     }
 }
