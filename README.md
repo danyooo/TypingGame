@@ -1,5 +1,6 @@
 # TypingGame
 An ICS4U Assignment
+
 For collaborators, please use "dotnetsetup.bat" in the vscode terminal  (if you're running portable version)
 
 ![Subtitle](https://github.com/danyooo/TypingGame/assets/42193011/1f0c4a14-fe4f-4aa0-aa9d-905dd62f4df1)
