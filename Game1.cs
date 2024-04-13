@@ -30,7 +30,8 @@ List<char> PlayerName = new List<char>();
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        // wordBank.chooseWord();
+        testBank.chooseWord();
+        Console.WriteLine("Help Me!");
         base.Initialize();
     }
 
@@ -69,7 +70,7 @@ List<char> PlayerName = new List<char>();
             //draw text
         _spriteBatch.Begin();
 _spriteBatch.DrawString(font,"testing",new Vector2(0,0),Color.Black);
-// testBank.displayText(_spriteBatch,font,chosenWord, 36,30);
+testBank.displayText(_spriteBatch,font,testBank.chosenWord, 36,30);
         _spriteBatch.End();
         base.Draw(gameTime);
     }

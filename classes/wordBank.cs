@@ -5,6 +5,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 // WordBank class
 namespace TypingGame{
   class wordBank{
@@ -12,7 +13,7 @@ namespace TypingGame{
     // would be overrided by whatever object inherits it 
 string[] words = { "test", "waaa", "beep"};
 //add a string that would contain the chosen random word
-string chosenWord;
+ public string chosenWord;
 //add a value to convert the random int chosen and set the value to the chosen word
 int randomVal;
 // add a instance of random to choose a random thing from the array list
@@ -23,11 +24,9 @@ public string chooseWord(){
 int listSize = this.words.Length;
 // make ChosenWord = a random value in the list
  randomVal = rnd.Next(0,listSize);
- chosenWord = this.words[randomVal];
+ this.chosenWord = this.words[randomVal];
 // return the chosen word after this is called
-return(chosenWord);
-Debug.WriteLine("test");
-
+return(this.chosenWord);
 }
 
 // Method to display word
@@ -35,5 +34,5 @@ public void displayText(SpriteBatch spriteBatch,SpriteFont font,  string text,in
     spriteBatch.DrawString(font,this.chosenWord,new Vector2(posX,posY),Color.Black);
 }
 }
-//example usage of function -> testBank.displayText(_spriteBatch,font,"I'm testing!", 36,30);
+//example usage of function -> testBank.displayText(_spriteBatch,font,testBank.chosenWord, 36,30);
 }
