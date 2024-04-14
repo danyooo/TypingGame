@@ -7,9 +7,10 @@ namespace TypingGame;
 
 public class Game1 : Game
 {
+    // set windowWidth & windowHeight
     // create a Player object
  Player player = new Player();
- wordBank testBank = new wordBank();
+ Enemy testEnemy = new Enemy();
  // Create a list that would contain the letters the player types (to set into a name)
 List<char> PlayerName = new List<char>();
 // Create a SpriteFont Object ( To load up the font to use for text)
@@ -26,11 +27,14 @@ List<char> PlayerName = new List<char>();
         IsMouseVisible = true;
     
     }
+    // set window width & height to an easier to manage variable
+// int windowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+// int windowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        testBank.chooseWord();
+        testEnemy.chooseWord();
         Console.WriteLine("Help Me!");
         base.Initialize();
     }
@@ -70,7 +74,7 @@ List<char> PlayerName = new List<char>();
             //draw text
         _spriteBatch.Begin();
 _spriteBatch.DrawString(font,"testing",new Vector2(0,0),Color.Black);
-testBank.displayText(_spriteBatch,font,testBank.chosenWord, 36,30);
+// testEn.displayText(_spriteBatch,font,testEn.chosenWord, 36,72);
         _spriteBatch.End();
         base.Draw(gameTime);
     }

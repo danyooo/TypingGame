@@ -8,10 +8,10 @@ using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
 // WordBank class
 namespace TypingGame{
-  class wordBank{
+   abstract class wordBank{
 // Empty word array that contains the set of words for an object
-    // would be overrided by whatever object inherits it 
-string[] words = { "test", "waaa", "beep"};
+    // would be overrided by whatever object inherits it . Declared as virtual for this exact reason
+string[] words;
 //add a string that would contain the chosen random word
  public string chosenWord;
 //add a value to convert the random int chosen and set the value to the chosen word
